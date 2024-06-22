@@ -24,10 +24,12 @@
     align-items: center;
     background-color: rgb(6, 42, 64);
     color: white;
+   
 }
             .header1{
                 display: flex;
                 flex-direction: row;
+                
             }
 
             .menuOculto{
@@ -44,8 +46,13 @@
     background-color: rgb(66, 63, 63);
   
             }
-            .filtro>p{
+            .FILTRO-GRID>p{
                 margin-bottom: 10px;
+                width: 90%;
+            }
+            .FILTRO-GRID>select{
+               
+                width: 90%;
             }
 
 .MAIN-GRID{
@@ -94,7 +101,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(61, 60, 60);
 }
 
 .FOOTER-GRID{
@@ -114,15 +121,8 @@
                     background-color:rgb(26, 46, 87) !important;
                 }
 
-
-
-
-
-
-/*Version Desktop*/
-@media (width>=992px){
-.GRID-CONTAINER{
-        
+@media (width>=576px){
+.GRID-CONTAINER{        
         width: 100%;
         grid-template-areas:
         "NAV FILTRO"
@@ -131,14 +131,7 @@
         grid-template-rows: 0.6fr 8fr 0.5fr;
         grid-template-columns:2fr 10fr;
     }
-.FILTRO-GRID{
-        grid-area: FILTRO;
-        position: sticky;
-        top: 0;
-    }
-            .filtro>select{
-                width: 90%;
-            }
+
  .NAVEGADOR-GRID{
     grid-area: NAVEGADOR;
         grid-area: NAV;
@@ -146,50 +139,69 @@
         justify-content: flex-start;
         align-items: center;
     }
-    .header1{
-        display: flex;
-        flex-direction: row;
-        position:sticky;
-        top: 0;
-    }
-    .header1>span{
-        padding-top: 15%;
-        padding-bottom: 10%;
-        text-align: center;
-    }
-    .header1>h3{
-        text-align: center;
-        padding-top: 15%;
-        padding-bottom: 10%;
-    }
-    .menuOculto{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        position:sticky;
-        top: 105px;
-    }
-    .menuOculto>span{
-        font-size: 20px;
-    }
-    .paginador{
+            .header1{
+                display: flex;
+                flex-direction: row;
+                position:sticky;
+                top: 0;
+            }
+            .menuDesplegable{
+                display: none;
+            }
+           
+            .header1>span{
+                padding-top: 15%;
+                padding-bottom: 10%;
+                text-align: center;
+            }
+            .header1>h4{
+                text-align: center;
+                padding-top: 15%;
+                padding-bottom: 10%;
+            }
+            .menuOculto{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                position:sticky;
+                top: 105px;
+            }
+            .menuOculto>span{
+                font-size: 20px;
+            }
+            .paginador{
+                position: sticky;
+                bottom: 0;
+            }
+
+.FILTRO-GRID{
+        grid-area: FILTRO;
         position: sticky;
-        bottom: 0;
+        top: 0;
+       
+      
     }
+            .FILTRO-GRID>select{
+                width: 90%;
+            }
+
+.MAIN-GRID{
+      grid-area: MAIN;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+       justify-items: center;
+       gap: 20px;
+             }
+
 .FOOTER-GRID{
         grid-area: FOOTER;
         position: sticky;
         bottom: 0;
     }
-    footer>span{
-        text-align: center;
-    }
-.MAIN-GRID{
-       grid-area: MAIN;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-items: center;
-    }
+            footer>span{
+                text-align: center;
+            }
+
 }
